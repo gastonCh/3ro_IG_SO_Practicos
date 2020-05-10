@@ -1,0 +1,15 @@
+#!/bin/bash
+if [ -d "$1" ]
+	then
+	d=$(du -h -s $1)
+	echo "El peso del directorio en Mb es de $d"
+elif [ -f "$1" ]
+	then
+	f=$(du -m $1)
+	echo "El peso del archivo en Mb es de $f"
+elif [ -z "$1" ]
+	then
+	echo "Este programa puede recibir como argumento el nombre de un archivo o la ruta de un directorio"
+else
+	echo "Argumento invalido"
+fi
