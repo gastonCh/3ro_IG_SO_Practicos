@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ -d "$1" ]
+	then
+	d=$(du -h -s $1)
+	echo "El peso del directorio en Mb es de $d"
+elif [ -f "$1" ]
+	then
+	f=$(du -m $1)
+	echo "El peso del archivo en Mb es de $f"
+else
+	echo "Argumento invalido"
+fi
