@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ -d "$1" ]
+then
+	echo "Esto es un Directorio"
+elif [ -f "$1" ]
+then
+	echo "Esto es un archivo"
+else
+	echo "No existe"
+fi
